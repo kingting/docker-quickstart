@@ -1,6 +1,15 @@
-# helloworld
-testing helloworld
+# Build the image
+docker build -t slim .
 
-this is a change in develop branch
+# Run a shell in the container
+docker run -it slim /bin/bash
 
-This is a change in readme-edits branch
+# Install docker registry in a lock down machine
+
+docker pull registry:2
+ 
+docker save -o registry.tar registry:2
+
+docker load -i registry.tar
+
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
