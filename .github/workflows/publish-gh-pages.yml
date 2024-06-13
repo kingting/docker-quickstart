@@ -55,7 +55,8 @@ jobs:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Copy README.md to index.md
-        run: cp README.md index.md
+        run: |
+          echo "---\nlayout: default\ntitle: Docker Quick Start Guide\n---\n$(cat README.md)" > index.md
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
