@@ -1,6 +1,10 @@
 
 # Docker Quick Start Guide
 
+## Introduction
+
+This quick start guide provides the basic Docker commands to help you get started with understanding and using Docker. By following this guide, you will learn how to build, tag, push, and manage Docker images and containers. You can actually run the commands in the examples after cloning this repository.
+
 ## Build the Image
 ```bash
 docker build -t <image_name>:<tag> .
